@@ -118,6 +118,7 @@
     </style>
     </head>
     <body id="bodyjs">
+      <div id="modals-here"></div>
     <div id=cloud-container>
        
         <div class="form-popup" id="myForm">
@@ -442,7 +443,7 @@
            <button onclick='window.location.href="/games/blockpost"' type=button class=" mp GameName"><img height=150 src="/img/blockpost.webp" width=150>Blockpost</button> 
            <button 
            class="uk-button uk-button-primary" 
-           hx-get="/modal" 
+           hx-get="/tests/modal" 
            hx-trigger="click" 
            hx-target="#modals-here"
            _="on htmx:afterOnLoad wait 10ms then add .uk-open to #modal">Show Modal Dialog</button>
