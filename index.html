@@ -11,7 +11,10 @@
     <link id="maincss" href=/main.css rel=stylesheet />
     <link href=/form.css rel=stylesheet />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-    
+    <script src="https://unpkg.com/htmx.org@1.8.4" integrity="sha384-wg5Y/JwF7VxGk4zLsJEcAojRtlVp1FKKdGy1qN+OMtdq72WRvX/EdRdqg/LOhYeV" crossorigin="anonymous"></script>
+    <style>
+      @import "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.9/css/uikit-core.min.css";
+    </style>
     <title>EmulatorOS Games</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2209834467602790"
      crossorigin="anonymous"></script>
@@ -437,12 +440,19 @@
            <button onclick='window.location.href="/games/tacomia"' type=button class=" GameName"><img height=150 src="/img/tacomia.webp" width=150>Papa's Taco Mia!</button> 
            <button onclick='window.location.href="/games/unfair"' type=button class=" plat GameName"><img height=150 src="/img/unfair.webp" width=150>Unfair Mario</button> 
            <button onclick='window.location.href="/games/blockpost"' type=button class=" mp GameName"><img height=150 src="/img/blockpost.webp" width=150>Blockpost</button> 
-            
+           <button 
+           class="uk-button uk-button-primary" 
+           hx-get="/modal" 
+           hx-trigger="click" 
+           hx-target="#modals-here"
+           _="on htmx:afterOnLoad wait 10ms then add .uk-open to #modal">Show Modal Dialog</button>
       </div>
     </div>
     </div>
     <div id=particles-js></div>
     <div id=squares></div>
+    
+    <script src="https://unpkg.com/hyperscript.org"></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src=/nohist.js></script>
